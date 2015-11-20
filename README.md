@@ -43,10 +43,10 @@ Student logins
 Student numbers
 student pictures
 
-Other:
+# Other:
 A navigation bar must be included at the bottom of all pages with links to Home and all links on Home page (include in Footer section for each page)
 A header must be included on all pages (group choice of wording)
 
-Formatting:
+# Formatting:
 Formatting should follow the mobile guidelines discussed in class
 Display should be reformatted for portrait and landscape for best mobile viewing
