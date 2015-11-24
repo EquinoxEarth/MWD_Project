@@ -8,6 +8,7 @@ $(document).on("pagebeforeshow", "#listAll", function(){
 	});
 });
 function displayAll(xml) {
+	$("#listAllXML").html("");
 	$(xml).find("stationBeanList").each(function(){
 		$("#listAllXML").append(
 			"<div style='float:left; width:33%;'>" +
@@ -38,6 +39,7 @@ $(document).on("pagebeforeshow", "#dynamicList", function(){
 	});
 });
 function displayColl(xml){
+	$("#dynListXML").html("");
 	$(xml).find("stationBeanList").each(function(){
 		$("#dynListXML").append(
 			"<section data-role='collapsible'>" +
