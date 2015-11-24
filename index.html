@@ -9,6 +9,7 @@
 	
 	<script src="_js/jquery.js"></script>
 	<script src="_js/jquery.mobile.js"></script>
+	<script src="_js/myscript.js"></script>
 </head>
 <body>
 	<div data-role="page" id="home">
@@ -24,12 +25,22 @@
 				a graph of how many available docks & bikes there are per station.
 			</p>
 			<ul data-role="listview" data-inset="true" data-filter="false">
-				<li><a href="#" data-translation="slideup">List All Stations</a></li>
+				<li><a href="#listAll" data-translation="slideup">List All Stations</a></li>
 				<li><a href="#" data-translation="slideup">Dynamic Stations List</a></li>
 				<li><a href="#" data-translation="slideup">Station Map</a></li>
 				<li><a href="#" data-translation="slideup">Graph of Docks per Station</a></li>
 				<li><a href="#" data-translation="slideup">Graph of Available Docks & Bikes per Station</a></li>
 			</ul>
+		</section>
+	</div>
+	<div data-role="page" id="listAll">
+		<header data-role="header">
+			<h1 class="ui-title">List of All Stations</h1>
+		</header>
+		
+		<section class="ui-content" role="main" id="listAllXML">
+			<!-- List all of the stations in the XML -->
+			
 		</section>
 	</div>
 </body>
