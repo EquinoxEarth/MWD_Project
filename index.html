@@ -6,7 +6,12 @@
 	
 	<link rel="stylesheet" href="_css/jquery.mobile.css">
 	<link rel="stylesheet" href="_css/mystyles.css">
-	<link rel="stylesheet" href="_css/style.css">
+	<style>
+		.center {
+			margin: auto;
+			width: 80%;
+		}
+	</style>
 	
 	<script src="_js/jquery.js"></script>
 	<script src="_js/jquery.mobile.js"></script>
@@ -27,7 +32,7 @@
 			</p>
 			<ul data-role="listview" data-inset="true" data-filter="false">
 				<li><a href="#listAll" data-translation="slideup">List All Stations</a></li>
-				<li><a href="#" data-translation="slideup">Dynamic Stations List</a></li>
+				<li><a href="#dynamicList" data-translation="slideup">Dynamic Stations List</a></li>
 				<li><a href="#" data-translation="slideup">Station Map</a></li>
 				<li><a href="#" data-translation="slideup">Graph of Docks per Station</a></li>
 				<li><a href="#" data-translation="slideup">Graph of Available Docks & Bikes per Station</a></li>
@@ -42,6 +47,19 @@
 		<section class="ui-content" role="main" id="listAllXML">
 			<!-- List all of the stations in the XML -->
 			
+		</section>
+	</div>
+	<div data-role="page" id="dynamicList">
+		<header data-role="header">
+			<h1 class="ui-title">Dynamic List</h1>
+		</header>
+		
+		<section class="ui-content" role="main">
+			
+			<!-- Put a collapsible-set here -->
+			<div id="dynListXML" data-role="collapsible-set">
+				
+			</div>
 		</section>
 	</div>
 </body>
