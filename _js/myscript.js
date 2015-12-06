@@ -76,7 +76,7 @@ function displayColl(xml){
 	});
 });
 	function displayMap(xml){
-		$('#smap').append("<script type="text/javascript" src='http://maps.google.com/maps/api/js?v=3&sensor=false&language=en'");
+		$('#Smap').append("<script type="text/javascript" src='http://maps.google.com/maps/api/js?v=3&sensor=false&language=en'");
 	}
 
 	$("#dynListXML").collapsibleset("refresh");
