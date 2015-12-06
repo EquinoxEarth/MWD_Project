@@ -66,5 +66,18 @@ function displayColl(xml){
 		);
 	});
 	
+
+	$(document).on("pagebeforeshow", "#stationMap", function(){
+	$.ajax({
+		type: "GET",
+		url: "projectXML06.xml",
+		dataType: "xml",
+		success: displayMap
+	});
+});
+	function displayMap(xml){
+		$('#smap').append("<script type="text/javascript" src='http://maps.google.com/maps/api/js?v=3&sensor=false&language=en'");
+	}
+
 	$("#dynListXML").collapsibleset("refresh");
 }
