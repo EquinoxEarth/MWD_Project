@@ -80,15 +80,14 @@ $(document).on("pageshow", "#stationMap", function(){
 		dataType: "xml",
 		success: displayMap
 	});
-	 $('#sMap').gmap('refresh');
+	// $('#sMap').gmap('refresh');
 });
-$(document).on("pagecreate", "#stationMap", function(){
+
 	function displayMap(xml){
 		$('#sMap').html("");
 		$('#sMap').append('<div id="resultMap" style="height:200px; width:200px; background-color:Lime;"></div>');
 		$('#sMap').gmap({'center' : home, 'zoom':16});
 	}
-});
 $(document).on("pageshow", "#totalDocks", function(){
 	$.ajax({
 		type: "GET",
