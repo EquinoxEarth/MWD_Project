@@ -97,5 +97,5 @@ $(document).on("pageshow", "#totalDocks", function(){
 	});
 });
 	function displayDocks(xml){
-	$('#tDock').append('<canvas id="myCanvas" width="200" height="100"><canvas>');
+	$('#tDocks').append('<canvas id="myCanvas" width="200" height="100"><canvas>');
 }
