@@ -89,7 +89,7 @@ $(document).on("pagebeforeshow", "#stationMap", function(){
 		//$('#sMap').gmap({'center' : home, 'zoom':16});
 	}*/
 	
-$(document).on("pagebeforeshow", "#stationMap", function(){
+$(document).on("pageshow", "#stationMap", function(){
 	$.ajax({
 		type: "GET",
 		url: "projectXML06.xml",
@@ -100,7 +100,7 @@ $(document).on("pagebeforeshow", "#stationMap", function(){
 
 function displayMap(xml){
 	$('#sMap').html("");
-	$('#sMap').css({"height": "200px", "wdith": "200px", "background-color": "Lime"});
+	$('#sMap').css({"height": "400px", "wdith": "200px", "background-color": "Lime"});
 	var mapOptions = {
 		center: home,
 		zoom: 16
