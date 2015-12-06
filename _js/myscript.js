@@ -115,19 +115,18 @@ $(document).on("pagebeforeshow", "#totalDock", function(){
 		success: displayDocks
 	});
 });
-var data = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
+
+
+	function displayDocks(xml){
+		var label=[];
+
+		$(xml).find('bikeshare').find('stationBeanList').each(function(){
+    	label.push(this.text());
+    });
+		var data = {
+    labels: label,
     datasets: [
-        {
-            label: "My First dataset",
-            fillColor: "rgba(220,220,220,0.2)",
-            strokeColor: "rgba(220,220,220,1)",
-            pointColor: "rgba(220,220,220,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(220,220,220,1)",
-            data: [65, 59, 80, 81, 56, 55, 40]
-        },
+      
         {
             label: "My Second dataset",
             fillColor: "rgba(151,187,205,0.2)",
@@ -140,7 +139,6 @@ var data = {
         }
     ]
 };
-	function displayDocks(xml){
 	$('#tDocks').html("");	
 	$('#tDocks').append('<canvas id="myCanvas" width="200" height="100"></canvas>');
 	var ctx = $("#myCanvas").get(0).getContext("2d");
