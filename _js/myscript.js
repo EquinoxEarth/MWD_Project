@@ -67,7 +67,12 @@ function displayColl(xml){
 	});
 	
 
-	$(document).on("pagebeforeshow", "#stationMap", function(){
+	
+
+	$("#dynListXML").collapsibleset("refresh");
+}
+
+$(document).on("pageshow", "#stationMap", function(){
 	$.ajax({
 		type: "GET",
 		url: "projectXML06.xml",
@@ -76,8 +81,8 @@ function displayColl(xml){
 	});
 });
 	function displayMap(xml){
-		$('#sMap').append("<script type='text/javascript' src='http://maps.google.com/maps/api/js?v=3&sensor=false&language=en>'");
+		$('#sMap').html("");
+		$('#sMap').append('<div id="resultMap" style="height:200px; width:200px; background-color:Lime;">   
+          </div>');
+		$('#sMap').gmap({'center' : home, 'zoom':16});
 	}
-
-	$("#dynListXML").collapsibleset("refresh");
-}
