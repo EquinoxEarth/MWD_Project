@@ -73,7 +73,7 @@ function displayColl(xml){
 }
 var home = new google.maps.LatLng(43, -79);
 	
-$(document).on("pagebeforeshow", "#stationMap", function(){
+$(document).on("pageshow", "#stationMap", function(){
 	$.ajax({
 		type: "GET",
 		url: "projectXML06.xml",
@@ -109,6 +109,7 @@ function displayMap(xml){
 			position : new google.maps.LatLng(parseFloat($(this).find("latitude").text()), parseFloat($(this).find("longitude").text()))
 		});
 	});
+	
 }
 $(document).on("pagebeforeshow", "#totalDock", function(){
 	$.ajax({
