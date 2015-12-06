@@ -71,9 +71,9 @@ function displayColl(xml){
 
 	$("#dynListXML").collapsibleset("refresh");
 }
-var home = new google.maps.LatLng(x, y);
+var home = new google.maps.LatLng(32, 32);
 
-$(document).on("pageshow", "#stationMap", function(){
+$(document).live("pageshow", "#stationMap", function(){
 	$.ajax({
 		type: "GET",
 		url: "projectXML06.xml",
@@ -82,9 +82,10 @@ $(document).on("pageshow", "#stationMap", function(){
 	});
 	 $('#sMap').gmap('refresh');
 });
-$(document).on("pageshow", "#stationMap", function(){
+$(document).live("pagecreate", "#stationMap", function(){
 	function displayMap(xml){
 		$('#sMap').html("");
+		$('#sMap').append('<div id="resultMap" style="height:200px; width:200px; background-color:Lime;"></div>');
 		$('#sMap').gmap({'center' : home, 'zoom':16});
 	}
 });
