@@ -73,7 +73,7 @@ function displayColl(xml){
 }
 var home = new google.maps.LatLng(32, 32);
 
-$(document).live("pageshow", "#stationMap", function(){
+$(document).on("pageshow", "#stationMap", function(){
 	$.ajax({
 		type: "GET",
 		url: "projectXML06.xml",
@@ -82,10 +82,19 @@ $(document).live("pageshow", "#stationMap", function(){
 	});
 	 $('#sMap').gmap('refresh');
 });
-$(document).live("pagecreate", "#stationMap", function(){
+$(document).on("pagecreate", "#stationMap", function(){
 	function displayMap(xml){
 		$('#sMap').html("");
 		$('#sMap').append('<div id="resultMap" style="height:200px; width:200px; background-color:Lime;"></div>');
 		$('#sMap').gmap({'center' : home, 'zoom':16});
 	}
+});
+$(document).on("pageshow", "#totalDocks", function(){
+	$.ajax({
+		type: "GET",
+		url: "projectXML06.xml",
+		dataType: "xml",
+		success: displayMap
+	});
+	$('#tDocks').append('<canvas id="myCanvas" width="200" height="100"><canvas>');
 });
