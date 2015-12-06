@@ -80,14 +80,17 @@ $(document).on("pagebeforeshow", "#stationMap", function(){
 		dataType: "xml",
 		success: displayMap
 	});
-	// $('#sMap').gmap('refresh');
 });
 
-	function displayMap(xml){
-		$('#sMap').html("");
-		$('#sMap').append('<div id="resultMap" style="height:200px; width:200px; background-color:Lime;"></div>');
-		//$('#sMap').gmap({'center' : home, 'zoom':16});
-	}
+function displayMap(xml){
+	$('#sMap').html("");
+	$('#sMap').css({"height": "200px", "wdith": "200px", "background-color": "Lime"});
+	var mapOptions = {
+		center: home,
+		zoom: 16
+	};
+	var map = new google.maps.Map(document.getElementById("sMap"), mapOptions);
+}
 $(document).on("pagebeforeshow", "#totalDock", function(){
 	$.ajax({
 		type: "GET",
