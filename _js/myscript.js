@@ -80,7 +80,7 @@ $(document).on("pageshow", "#stationMap", function(){
 		dataType: "xml",
 		success: displayMap
 	});
-	// $('#sMap').gmap('refresh');
+	 $('#sMap').gmap('refresh');
 });
 
 	function displayMap(xml){
@@ -97,5 +97,5 @@ $(document).on("pageshow", "#totalDocks", function(){
 	});
 });
 	function displayDocks(xml){
-	$('#tDocks').append('<canvas id="myCanvas" width="200" height="100"><canvas>');
-	}
+	$('#tDock').append('<canvas id="myCanvas" width="200" height="100"><canvas>');
+}
