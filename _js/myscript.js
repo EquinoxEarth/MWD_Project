@@ -71,6 +71,7 @@ function displayColl(xml){
 
 	$("#dynListXML").collapsibleset("refresh");
 }
+var home = new google.maps.LatLng(x, y);
 
 $(document).on("pageshow", "#stationMap", function(){
 	$.ajax({
@@ -79,10 +80,11 @@ $(document).on("pageshow", "#stationMap", function(){
 		dataType: "xml",
 		success: displayMap
 	});
+	 $('#sMap').gmap('refresh');
 });
+$(document).on("pageshow", "#stationMap", function(){
 	function displayMap(xml){
 		$('#sMap').html("");
-		$('#sMap').append('<div id="resultMap" style="height:200px; width:200px; background-color:Lime;">   
-          </div>');
 		$('#sMap').gmap({'center' : home, 'zoom':16});
 	}
+});
