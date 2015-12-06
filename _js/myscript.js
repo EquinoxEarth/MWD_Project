@@ -72,7 +72,23 @@ function displayColl(xml){
 	$("#dynListXML").collapsibleset("refresh");
 }
 var home = new google.maps.LatLng(32, 32);
+/*
+$(document).on("pagebeforeshow", "#stationMap", function(){
+	$.ajax({
+		type: "GET",
+		url: "projectXML06.xml",
+		dataType: "xml",
+		success: displayMap
+	});
+	// $('#sMap').gmap('refresh');
+});
 
+	function displayMap(xml){
+		$('#sMap').html("");
+		$('#sMap').append('<div id="resultMap" style="height:200px; width:200px; background-color:Lime;"></div>');
+		//$('#sMap').gmap({'center' : home, 'zoom':16});
+	}*/
+	
 $(document).on("pagebeforeshow", "#stationMap", function(){
 	$.ajax({
 		type: "GET",
