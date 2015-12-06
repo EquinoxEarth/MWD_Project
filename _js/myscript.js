@@ -94,7 +94,9 @@ $(document).on("pageshow", "#totalDocks", function(){
 		type: "GET",
 		url: "projectXML06.xml",
 		dataType: "xml",
-		success: displayMap
+		success: displayDocks
 	});
-	$('#tDocks').append('<canvas id="myCanvas" width="200" height="100"><canvas>');
 });
+	function displayDocks(xml){
+	$('#tDocks').append('<canvas id="myCanvas" width="200" height="100"><canvas>');
+	}
