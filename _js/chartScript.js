@@ -27,7 +27,7 @@ function loadXMLData(xml){
 $(document).on("pageshow", "#totalDocks", function() {
 	var pieChart = new Array();
 	for (var x = 0; x < labels.length; x++) {
-		pieChart[x] = {label : labels[x], value : dataTotal[x], color : "red"};
+		pieChart[x] = {label : labels[x], value : dataTotal[x], color : 'rgb(' + Math.floor(Math.random() * 256) + ',' +Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')'};
 	}
 	
 	var cvs = document.getElementById("tDocks").getContext('2d');
