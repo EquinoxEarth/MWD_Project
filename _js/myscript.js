@@ -115,7 +115,7 @@ function displayMap(xml){
 }
 
 // TOTAL CHART
-$(document).on("pageshow", "#totalDock", function(){
+/*$(document).on("pageshow", "#totalDock", function(){
 	$.ajax({
 		type: "GET",
 		url: "projectXML06.xml",
@@ -149,6 +149,6 @@ function displayDocks(xml){
 	};
 	var ctx = document.getElementById("tDocks").getContext('2d');
 	var myNewChart = new Chart(ctx).Line(data);
-}
+}*/
 
 // AVAILABLE CHART
