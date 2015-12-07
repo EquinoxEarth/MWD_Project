@@ -126,7 +126,7 @@ $(document).on("pageshow", "#totalDock", function(){
 		var avail = [];
 		$(xml).find('bikeshare').each(function(){
     	label.push($(this).find('stationName').text());
-    	avail.push($(this).find('availableDocks').text());
+    	avail.push($(this).find('availableDocks').text().int());
     });
 		
 
@@ -142,7 +142,7 @@ $(document).on("pageshow", "#totalDock", function(){
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
-            data: avail
+            data: 
         }
     ]
 };
