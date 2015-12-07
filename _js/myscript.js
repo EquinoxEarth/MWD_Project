@@ -147,9 +147,7 @@ function displayDocks(xml){
         	}
     	]
 	};
-	$('#tDocks').html("");	
-	$('#tDocks').append('<canvas id="myCanvas" width="500" height="500"></canvas>');
-	var ctx = $("#myCanvas").get(0).getContext('2d');
+	var ctx = document.getElementById("tDocks").getContext('2d');
 	var myNewChart = new Chart(ctx).Line(data);
 }
 
