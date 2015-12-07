@@ -119,35 +119,32 @@ $(document).on("pageshow", "#totalDock", function(){
 		success: displayDocks
 	});
 });
-
-
-	function displayDocks(xml){
-		var label=[];
-		var avail = [];
-		$(xml).find('bikeshare').each(function(){
-    	label.push($(this).find('stationName').text());
-    	avail.push($(this).find('availableDocks').text().int());
-    });
+function displayDocks(xml){
+	var label=[];
+	var avail = [];
+	$(xml).find('bikeshare').each(function(){
+   		label.push($(this).find('stationName').text());
+   		avail.push($(this).find('availableDocks').text().int());
+	});
 		
 
-		var data = {
-    labels: label,
-    datasets: [
-      
-        {
-            label: "My Second dataset",
-            fillColor: "rgba(151,187,205,0.2)",
-            strokeColor: "rgba(151,187,205,1)",
-            pointColor: "rgba(151,187,205,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(151,187,205,1)",
-            data: 
-        }
-    ]
-};
+	var data = {
+    	labels: label,
+    	datasets: [
+        	{
+            	label: "My Second dataset",
+            	fillColor: "rgba(151,187,205,0.2)",
+            	strokeColor: "rgba(151,187,205,1)",
+            	pointColor: "rgba(151,187,205,1)",
+            	pointStrokeColor: "#fff",
+            	pointHighlightFill: "#fff",
+            	pointHighlightStroke: "rgba(151,187,205,1)",
+            	data: 
+        	}
+    	]
+	};
 	$('#tDocks').html("");	
 	$('#tDocks').append('<canvas id="myCanvas" width="500" height="500"></canvas>');
-	var ctx = $("#myCanvas").get(0).getContext("2d");
+	var ctx = $("#myCanvas").get(0).getContext('2d');
 	var myNewChart = new Chart(ctx).Line(data);
 }
