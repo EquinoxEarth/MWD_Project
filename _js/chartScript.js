@@ -37,26 +37,23 @@ $(document).on("pageshow", "#totalDocks", function() {
 // Display the Available Docks each Station has //
 $(document).on("pageshow", "#availBike", function() {
 	var chartData = new Array();
-	var dataSets = new Array();
-	for (var x = 0; x < labels.length; x++) {
-		dataSets[x] = [
-			{
-				strokeColor : "rgba(255, 0, 0, 1)",
-				fillColor : "rgba(220, 0, 0, 0.5)",
-				data : dataTotal
-			},
-			{
-				strokeColor : "rgba(0, 255, 0, 1)",
-				fillColor : "rgba(0, 220, 0, 0.5)",
-				data : dataAvailDocks
-			},
-			{
-				strokeColor : "rgba(0, 0, 255, 1)",
-				fillColor : "rgba(0, 0, 220, 0.5)",
-				data : dataAvailBikes
-			}
-		]
-	}
+	var dataSets = [
+		{
+			strokeColor : "rgba(255, 0, 0, 1)",
+			fillColor : "rgba(220, 0, 0, 0.5)",
+			data : dataTotal
+		},
+		{
+			strokeColor : "rgba(0, 255, 0, 1)",
+			fillColor : "rgba(0, 220, 0, 0.5)",
+			data : dataAvailDocks
+		},
+		{
+			strokeColor : "rgba(0, 0, 255, 1)",
+			fillColor : "rgba(0, 0, 220, 0.5)",
+			data : dataAvailBikes
+		}
+	]
 	
 	chartData = {
 		labels : labels,
