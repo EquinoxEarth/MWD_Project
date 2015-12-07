@@ -125,7 +125,7 @@ $(document).on("pagebeforeshow", "#totalDock", function(){
 		var label=[];
 
 		$(xml).find('bikeshare').find('stationBeanList').each(function(){
-    	label.push(this.text());
+    	label.push($(this).text());
     });
 		var data = {
     labels: label,
@@ -144,7 +144,7 @@ $(document).on("pagebeforeshow", "#totalDock", function(){
     ]
 };
 	$('#tDocks').html("");	
-	$('#tDocks').append('<canvas id="myCanvas" width="200" height="100"></canvas>');
+	$('#tDocks').append('<canvas id="myCanvas" width="500" height="500"></canvas>');
 	var ctx = $("#myCanvas").get(0).getContext("2d");
 	var myNewChart = new Chart(ctx).Line(data);
 }
