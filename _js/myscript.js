@@ -71,6 +71,8 @@ function displayColl(xml){
 
 	$("#dynListXML").collapsibleset("refresh");
 }
+
+// MAP
 var home = new google.maps.LatLng(43, -79);
 	
 $(document).on("pageshow", "#stationMap", function(){
@@ -111,6 +113,8 @@ function displayMap(xml){
 	});
 	
 }
+
+// TOTAL CHART
 $(document).on("pageshow", "#totalDock", function(){
 	$.ajax({
 		type: "GET",
@@ -124,7 +128,7 @@ function displayDocks(xml){
 	var avail = [];
 	$(xml).find('bikeshare').each(function(){
    		label.push($(this).find('stationName').text());
-   		avail.push($(this).find('availableDocks').text().int());
+   		avail.push($(this).find('totalDocks').text().int());
 	});
 		
 
@@ -139,7 +143,7 @@ function displayDocks(xml){
             	pointStrokeColor: "#fff",
             	pointHighlightFill: "#fff",
             	pointHighlightStroke: "rgba(151,187,205,1)",
-            	data: 
+            	data: avail
         	}
     	]
 	};
@@ -148,3 +152,5 @@ function displayDocks(xml){
 	var ctx = $("#myCanvas").get(0).getContext('2d');
 	var myNewChart = new Chart(ctx).Line(data);
 }
+
+// AVAILABLE CHART
