@@ -111,7 +111,7 @@ function displayMap(xml){
 	});
 	
 }
-$(document).on("pagebeforeshow", "#totalDock", function(){
+$(document).on("pageshow", "#totalDock", function(){
 	$.ajax({
 		type: "GET",
 		url: "projectXML06.xml",
@@ -123,10 +123,13 @@ $(document).on("pagebeforeshow", "#totalDock", function(){
 
 	function displayDocks(xml){
 		var label=[];
-
-		$(xml).find('bikeshare').find('stationBeanList').each(function(){
-    	label.push($(this).text());
+		var avail = [];
+		$(xml).find('bikeshare').each(function(){
+    	label.push($(this).find('stationName').text());
+    	avail.push($(this).find('availableDocks').text());
     });
+		
+
 		var data = {
     labels: label,
     datasets: [
@@ -139,7 +142,7 @@ $(document).on("pagebeforeshow", "#totalDock", function(){
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
-            data: [28, 48, 40, 19, 86, 27, 90]
+            data: avail
         }
     ]
 };
