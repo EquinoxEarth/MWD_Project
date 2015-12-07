@@ -25,6 +25,7 @@
 	</style>
 	
 	<!-- Custom Scripts -->
+	<script src="_js/chartScript.js"></script>
 	<script src="_js/myscript.js"></script>
 </head>
 <body>
@@ -49,6 +50,8 @@
 			</ul>
 		</section>
 	</div>
+	
+	<!-- Page for List of All Stations -->
 	<div data-role="page" id="listAll">
 		<header data-role="header">
 			<h1 class="ui-title">List of All Stations</h1>
@@ -59,6 +62,8 @@
 			
 		</section>
 	</div>
+	
+	<!-- Page for Dynamic List -->
 	<div data-role="page" id="dynamicList">
 		<header data-role="header">
 			<h1 class="ui-title">Dynamic List</h1>
@@ -72,6 +77,8 @@
 			</div>
 		</section>
 	</div>
+	
+	<!-- Page for Station Map -->
 	<div data-role="page" id="stationMap">
 		<header data-role="header">
 			<h1 class="ui-title">Map of Stations</h1>
@@ -85,6 +92,8 @@
 			</div>
 		</section>
 	</div>
+	
+	<!-- Page for Total Docks -->
 	<div data-role="page" id="totalDock">
 		<header data-role="header">
 			<h1 class="ui-title">Total Docks</h1>
@@ -96,7 +105,9 @@
 			<canvas id="tDocks" height="450" width="600"></canvas>
 		</section>
 	</div>
-	<div data-role="page" id="availDock">
+	
+	<!-- Page for Available Bikes -->
+	<div data-role="page" id="availBike">
 		<header data-role="header">
 			<h1 class="ui-title">Available Docks</h1>
 		</header>
@@ -104,7 +115,7 @@
 		<section class="ui-content" role="main">
 			
 			<!-- Put the Chart here -->
-			<canvas id="aDocks" height="450" width="600"></canvas>
+			<canvas id="aBikes" height="450" width="600"></canvas>
 		</section>
 	</div>
 </body>
