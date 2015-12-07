@@ -19,8 +19,8 @@ function loadXMLData(xml){
 		dataTotal[x] = $(this).find("totalDocks").text();
 		dataAvailDocks[x] = $(this).find("availableDocks").text();
 		dataAvailBikes[x] = $(this).find("availableBikes").text();
+		x++;
 	});
-	x++;
 }
 
 // Display the Total Docks the Station has //
