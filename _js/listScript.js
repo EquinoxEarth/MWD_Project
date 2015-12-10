@@ -71,17 +71,8 @@ function displayColl(xml){
 
 	$("#dynListXML").collapsibleset("refresh");
 }
-var home = new google.maps.LatLng(43, -79);
-	
-$(document).on("pageshow", "#stationMap", function(){
-	$.ajax({
-		type: "GET",
-		url: "projectXML06.xml",
-		dataType: "xml",
-		success: displayMap
-	});
-});
 
+<<<<<<< HEAD:_js/myscript.js
 function displayMap(xml){
 	var x = 0;
 	var y = 0;
@@ -151,3 +142,6 @@ $(document).on("pageshow", "#totalDock", function(){
 	var ctx = $("#myCanvas").get(0).getContext("2d");
 	var myNewChart = new Chart(ctx).Line(data);
 }
+=======
+// MAP
+>>>>>>> 7b0566c4ca4f3dbe94d5d0b74f11c09d6d5cb504:_js/listScript.js

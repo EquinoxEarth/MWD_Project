@@ -1,0 +1,25 @@
+{
+	"team": 
+	{
+		"member": [
+			{
+				"fullName": "Cole Finnie",
+				"slateLogin": "FINNIEC",
+				"studentNumber": "991-359-500",
+				"studentPicture": "somePicture.jpg"
+			},
+			{
+				"fullName": "John Peterson",
+				"slateLogin": "peterjoh",
+				"studentNumber": "991373564",
+				"studentPicture": "Smiley_Face.jpg"
+			},
+			{
+				"fullName": "Kyle Roberts",
+				"slateLogin": "robert31",
+				"studentNumber": "991243084",
+				"studentPicture": "kroberts.jpg"
+			}
+		]
+	}
+}

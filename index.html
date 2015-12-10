@@ -4,20 +4,35 @@
 	<meta charset="utf-8" />
 	<title>Home Page</title>
 	
+	<!-- jQuery Mobile API -->
 	<link rel="stylesheet" href="_css/jquery.mobile.css">
 	<link rel="stylesheet" href="_css/mystyles.css">
+	<script src="_js/API/jquery.js"></script>
+	<script src="_js/API/jquery.mobile.js"></script>
+	
+	<!-- Google Maps jQuery API -->
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
-	<script type="text/javascript" src="_js/Chart.js"></script>
+	
+	<!-- Chart API -->
+	<script type="text/javascript" src="_js/API/Chart.js"></script>
+	
+	<!-- Document-specific Style -->
 	<style>
 		.center {
 			margin: auto;
 			width: 80%;
 		}
+		#aDocks {
+			width:75%;
+			height:100%;
+		}
 	</style>
 	
-	<script src="_js/jquery.js"></script>
-	<script src="_js/jquery.mobile.js"></script>
-	<script src="_js/myscript.js"></script>
+	<!-- Custom Scripts -->
+	<script src="_js/chartScript.js"></script>
+	<script src="_js/listScript.js"></script>
+	<script src="_js/mapScript.js"></script>
+	<script src="_js/teamScript.js"></script>
 </head>
 <body>
 	<div data-role="page" id="home">
@@ -36,11 +51,14 @@
 				<li><a href="#listAll" data-translation="slideup">List All Stations</a></li>
 				<li><a href="#dynamicList" data-translation="slideup">Dynamic Stations List</a></li>
 				<li><a href="#stationMap" data-translation="slideup" id="stationMapId">Station Map</a></li>
-				<li><a href="#totalDock" data-translation="slideup">Graph of Docks per Station</a></li>
-				<li><a href="#" data-translation="slideup">Graph of Available Docks & Bikes per Station</a></li>
+				<li><a href="#totalDocks" data-translation="slideup">Graph of Docks per Station</a></li>
+				<li><a href="#availBike" data-translation="slideup">Graph of Available Docks & Bikes per Station</a></li>
+				<li><a href="#teamPage" data-translation="slideup">Team Page</a></li>
 			</ul>
 		</section>
 	</div>
+	
+	<!-- Page for List of All Stations -->
 	<div data-role="page" id="listAll">
 		<header data-role="header">
 			<h1 class="ui-title">List of All Stations</h1>
@@ -51,6 +69,8 @@
 			
 		</section>
 	</div>
+	
+	<!-- Page for Dynamic List -->
 	<div data-role="page" id="dynamicList">
 		<header data-role="header">
 			<h1 class="ui-title">Dynamic List</h1>
@@ -64,6 +84,8 @@
 			</div>
 		</section>
 	</div>
+	
+	<!-- Page for Station Map -->
 	<div data-role="page" id="stationMap">
 		<header data-role="header">
 			<h1 class="ui-title">Map of Stations</h1>
@@ -77,30 +99,45 @@
 			</div>
 		</section>
 	</div>
-	<div data-role="page" id="totalDock">
+	
+	<!-- Page for Total Docks -->
+	<div data-role="page" id="totalDocks">
 		<header data-role="header">
 			<h1 class="ui-title">Total Docks</h1>
 		</header>
 		
 		<section class="ui-content" role="main">
 			
-			<!-- Put the Map here -->
-			<div id="tDocks">
-				
-			</div>
+			<!-- Put the Chart here -->
+			<canvas id="tDocks" height="450" width="600"></canvas>
 		</section>
 	</div>
-	<div data-role="page" id="availDock">
+	
+	<!-- Page for Available Bikes -->
+	<div data-role="page" id="availBike">
 		<header data-role="header">
 			<h1 class="ui-title">Available Docks</h1>
 		</header>
 		
 		<section class="ui-content" role="main">
 			
-			<!-- Put the Map here -->
-			<div id="aDock">
-				
-			</div>
+			<!-- Put the Chart here -->
+			<canvas id="aDocks"></canvas>
+		</section>
+	</div>
+	
+	<!-- Team Page -->
+	<div data-role="page" id="teamPage">
+		<header data-role="header">
+			<h1 class="ui-title">Team Members</h1>
+		</header>
+		
+		<section class="ui-content" role="main">
+			
+			<!-- Put Team Members here -->
+			<ul data-role="listview" id="teamList" data-autodividers="true" data-inset="true" class="ui-listview ui-listview-insert ui-corner-all ui-shadow">
+				<!-- Team Members -->
+			</ul>
 		</section>
 	</div>
 </body>

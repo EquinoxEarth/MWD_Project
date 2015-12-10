@@ -10,7 +10,7 @@
 */
 
 /* MY CUSTOM ADD-INs */
-.dynTable th, .dynTable td {text-align: left; padding:5px; color:white; background: grey;}
+th, td {text-align: left; padding:5px; color:white; background: grey;}
 
 /* Globals */
 /* Font
